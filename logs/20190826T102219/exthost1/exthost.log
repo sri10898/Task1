@@ -1,0 +1,68 @@
+[2019-08-26 10:22:21.486] [exthost] [info] extension host started
+[2019-08-26 10:22:21.545] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-08-26 10:22:21.545] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2019-08-26 10:22:21.641] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-08-26 10:22:21.641] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-08-26 10:22:21.794] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-08-26 10:22:21.794] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/ecmel.vscode-html-css-0.2.3/dist/extension
+[2019-08-26 10:22:22.090] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-08-26 10:22:22.090] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-08-26 10:22:22.104] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-08-26 10:22:22.104] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-08-26 10:22:22.131] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-08-26 10:22:22.131] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-08-26 10:22:22.305] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-08-26 10:22:22.305] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-08-26 10:22:22.335] [exthost] [info] ExtensionService#_doActivateExtension boukichi.watch-run {"startup":true,"activationEvent":"*"}
+[2019-08-26 10:22:22.335] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/boukichi.watch-run-0.3.1/out/extension
+[2019-08-26 10:22:22.337] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2019-08-26 10:22:22.337] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/michelemelluso.code-beautifier-2.3.3/out/src/extension
+[2019-08-26 10:22:22.460] [exthost] [info] eager extensions activated
+[2019-08-26 10:22:34.926] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-26 10:22:34.926] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-08-26 10:22:34.943] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-26 10:22:34.943] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-08-26 10:49:07.068] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-08-26 10:49:07.068] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html-language-features/client/dist/htmlMain
+[2019-08-26 12:39:10.352] [exthost] [error] [vscode.typescript-language-features] provider FAILED
+[2019-08-26 12:39:10.356] [exthost] [error] Error: <main> TypeScript Server Error (3.5.2)
+Debug Failure. False expression.
+Error: Debug Failure. False expression.
+    at doChange (tsserver.js:116683:22)
+    at tsserver.js:116674:96
+    at Function.ChangeTracker.with (tsserver.js:111855:17)
+    at Object.getCodeActions (tsserver.js:116674:64)
+    at tsserver.js:112841:121
+    at Object.flatMap (tsserver.js:573:25)
+    at Object.getFixes (tsserver.js:112841:23)
+    at tsserver.js:122417:35
+    at Object.flatMap (tsserver.js:573:25)
+    at Object.getCodeFixesAtPosition (tsserver.js:122415:23)
+    at IOSession.Session.getCodeFixes (tsserver.js:131471:64)
+    at Session.handlers.ts.createMapFromTemplate._a.(anonymous function) (tsserver.js:130221:61)
+    at tsserver.js:131665:88
+    at IOSession.Session.executeWithRequestId (tsserver.js:131656:28)
+    at IOSession.Session.executeCommand (tsserver.js:131665:33)
+    at IOSession.Session.onMessage (tsserver.js:131687:35)
+    at Interface.<anonymous> (tsserver.js:132978:27)
+    at Interface.emit (events.js:182:13)
+    at Interface._onLine (readline.js:290:10)
+    at Interface._normalWrite (readline.js:433:12)
+    at Socket.ondata (readline.js:149:10)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at Socket.Readable.push (_stream_readable.js:219:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+	at Function.create (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:53:63436)
+	at h.dispatchResponse (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:53:56618)
+	at h.dispatchMessage (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:53:55516)
+	at constructor._reader.onData.e (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:53:54992)
+	at u.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:48:468)
+	at t.Reader.onLengthData (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:53:61656)
+	at Socket.t.Reader.constructor.e.on.e (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:53:61304)
+	at Socket.emit (events.js:182:13)
+	at addChunk (_stream_readable.js:283:12)
+	at readableAddChunk (_stream_readable.js:264:11)
+	at Socket.Readable.push (_stream_readable.js:219:10)
+	at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)

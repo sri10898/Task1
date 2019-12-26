@@ -1,0 +1,1429 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: inherit;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+.button:disabled,
+.commonBtns:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+
+header {
+    padding: 0 0 0 15px;
+    height: 67px;
+    background-color: #f68517;
+    background-image: url('/assets/images/headerGradient.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    .headerCenter {
+        overflow: hidden;
+        flex: 0 1 auto;
+        h3 {
+            text-align: center;
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.06rem;
+        }
+        h4 {
+            width: 690px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.06rem;
+            text-align: center;
+        }
+    }
+    .headerLeft {
+        justify-content: flex-start;
+        img {
+            width: 70px;
+            height: 70px;
+            background-color: white;
+        }
+    }
+    .headerRight {
+        justify-content: flex-end;
+        flex-direction: column;
+        text-align: right;
+        text-align: -webkit-right;
+        border-bottom-left-radius: 100%;
+        height: 67px;
+        background-color: white;
+        p {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.03rem;
+            position: relative;
+            top: -13px;
+            right: 15px;
+        }
+        button {
+            font-size: 14px;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 12px;
+            border: solid 2px #ff5a00;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            background-color: #f68517;
+            box-shadow: inset 0px 5px 5px 0 rgba(255, 255, 255, 0.6);
+            position: relative;
+            right: 15px;
+            bottom: 5px;
+             :focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+header .headerLeft,
+header .headerRight {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.maintainanceMsgAlert {
+    height: 27px;
+    p {
+        padding: 5px 15px;
+    }
+}
+
+.blockHeading {
+    padding: 0 13px;
+    font-weight: 500;
+}
+
+.vehicleNo {
+    text-transform: uppercase;
+}
+
+.freeTxnsForm,
+.freeTxnsForm select {
+    font-size: 18px;
+}
+
+.freeTxnsForm h3 {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.camUrl {
+    width: 100%;
+    height: 100%;
+}
+
+.screen-wrapper .screen {
+    height: 100%;
+    width: 100%;
+}
+
+.screen-wrapper {
+    height: 440px;
+}
+
+.freeTxnLabels {
+    margin: 15px 0;
+}
+
+.freeTxnLabelsVN {
+    margin: 5px 0;
+}
+
+.noCameraBlock {
+    position: relative;
+}
+
+.refreshButton:focus {
+    outline: none;
+}
+
+.indicators {
+    padding: 20px 0;
+}
+
+.refreshButton {
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    background-color: transparent;
+    color: #e8423c;
+    font-size: 40px;
+}
+
+.vehicleNumber {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 0.1rem;
+    height: 85px !important;
+    padding: 0 !important;
+    position: relative;
+    top: -4px;
+}
+
+.vehicleNumber::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #cec4c4;
+    opacity: 1;
+    /* Firefox */
+}
+
+.vehicleNumber:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #cec4c4;
+}
+
+.vehicleNumber::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #cec4c4;
+}
+
+.finishTxn~p {
+    position: relative;
+    top: 4px;
+    text-align: center;
+    margin-bottom: 0;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.09rem;
+}
+
+.laneForm .success i,
+.fleetForm .success i {
+    margin-right: 5px;
+}
+
+.laneForm .success,
+.fleetForm .success {
+    color: #428842;
+}
+
+.laneForm .form-group .error {
+    position: relative;
+    top: 5px;
+}
+
+.laneForm .form-group .error,
+.fleetForm .form-group .error {
+    color: red;
+    font-size: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.vehicleType {
+    height: 77px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 4px 5px;
+    box-shadow: inset 0px 7px 5px 0 rgba(255, 255, 255, 0.6);
+    line-height: 5rem;
+    width: 90%;
+}
+
+.bgColor {
+    background-color: #353535;
+}
+
+.marginTop20N {
+    margin-top: -20px;
+}
+
+.journeyType {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 4px 0;
+    box-shadow: inset 0px 7px 5px 0 rgba(255, 255, 255, 0.6);
+    line-height: 2rem;
+    width: 93%;
+    height: 48px;
+}
+
+.paymentType {
+    height: 40px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 4px 5px 10px;
+    box-shadow: inset 0px 7px 5px 0 rgba(255, 255, 255, 0.6);
+    line-height: 2rem;
+    width: 93%;
+}
+
+.customInput {
+    width: 97%;
+    margin: 0 auto;
+}
+
+.formEnableAlert {
+    animation: blinkingButton 1s infinite;
+}
+
+.inlineLabels {
+    margin: 5px 0;
+}
+
+.customLabel {
+    letter-spacing: 0.09rem;
+    color: #171515;
+    margin-bottom: -10px;
+    font-size: 22px !important;
+    text-transform: uppercase;
+    word-break: break-all;
+    height: auto !important;
+}
+
+.exemptTitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.exemptSnap {
+    width: 300px;
+    height: 209px;
+    float: right;
+    border: 2px solid black;
+}
+
+.opBtns {
+    padding: 8px 4px 8px 5px;
+    margin: 2px;
+    border-radius: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.exemptCam {
+    float: left;
+    border: 2px solid black;
+}
+
+.snapWrapper {
+    clear: both;
+    overflow: hidden;
+}
+
+.smartCard {
+    border-radius: 2px;
+    font-family: serif;
+    border-radius: 20px;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: red;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.vehicleType:hover {
+    background-color: #f68517;
+    border: solid 2px #ff5a00;
+}
+
+.liveStreamBlock {
+    width: 249.28px;
+    height: 201px;
+}
+
+.customAlertIcon {
+    margin-right: 5px;
+    font-family: "FontAwesome" !important;
+}
+
+.refreshIcon {
+    font-family: "FontAwesome" !important;
+}
+
+.shiftEndAlertDialog {
+    padding-top: 20px;
+    border: 1px solid #f68517;
+    h4 {
+        padding: 30px 0 10px;
+    }
+}
+
+.customBtns {
+    padding: 5px 10px;
+    margin: 20px 10px;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+.logoutDialog {
+    padding: 20px;
+    border: 1px solid #f68517;
+    h1 {
+        color: #f68517;
+    }
+    h5 {
+        padding: 30px 0 10px;
+    }
+}
+
+.screenTitle {
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.cameraScreenBlock {
+    text-align: center;
+    padding: 35px 0;
+    background-color: #dbdbdb;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+    h6 {
+        margin-top: 16px;
+        color: red;
+    }
+}
+
+.finishTxn {
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: serif;
+    padding: 13px 10px;
+}
+
+.deviceStatusBlock {
+    position: relative;
+    left: 2px;
+}
+
+.shiftBlock,
+.deviceStatusBlock {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 12px;
+    height: 60px;
+}
+
+.towedForm,
+.fleetForm {
+    position: relative;
+    top: -18px;
+    font-size: 20px;
+}
+
+.towedForm input,
+.fleetForm select,
+.fleetForm input {
+    padding: 0 10px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.towedForm input::placeholder {
+    text-transform: uppercase;
+}
+
+.marginTop5 {
+    margin-top: 5px;
+}
+
+.marginTop15 {
+    margin-top: 15px !important;
+}
+
+.marginTop {
+    margin-top: 1px;
+}
+
+.printerImg {
+    padding: 5px;
+}
+
+.deviceStatus {
+    position: relative;
+    top: -22px;
+    padding-left: 119px;
+}
+
+.deviceStatus img {
+    width: 60px;
+    height: auto;
+    margin: 0 5px;
+    border-radius: 10px;
+    float: left;
+}
+
+.shiftBlock h4,
+.deviceStatusBlock h4 {
+    font-size: 17px;
+    top: 15px;
+    z-index: 1111;
+    position: relative;
+}
+
+.exemptBtn {
+    background-color: red !important;
+}
+
+.fleetBlock {
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.finishTxn:hover {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+.finishTxn:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.formContainer {
+    background-color: #cbd8e4;
+    padding: 20px 15px 0 5px;
+}
+
+.formEnableAlert {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -10px;
+    animation: blinkingText 1s infinite;
+    font-size: 12px;
+}
+
+.laneForm .form-control:disabled,
+.laneForm .form-control[readonly] {
+    background-color: #dde1e4;
+    cursor: not-allowed;
+    border: none;
+}
+
+.opBtns:disabled,
+.customBtns:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.mainFormWrapper .form-group {
+    height: 100%;
+}
+
+.laneForm .finishTxn:disabled {
+    cursor: not-allowed;
+}
+
+.laneForm .form-group {
+    margin-top: 0px;
+}
+
+.fleetForm .form-group {
+    margin-top: 5px;
+}
+
+.laneForm .form-group,
+.fleetForm .form-group {
+    padding: 0px 10px 0px 9px;
+}
+
+.laneForm .form-control,
+.fleetForm .form-control {
+    padding: .375rem .75rem;
+    color: black;
+}
+
+.laneForm input.form-control,
+.laneForm select.form-control {
+    border: 1px solid black;
+}
+
+.laneForm .form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    letter-spacing: 0.019rem;
+    padding: 0 0 0 11px;
+}
+
+.journeyMenu {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 10px 5px !important;
+}
+
+.journeyMenu li {
+    list-style-type: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.journeyMenu li input {
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+
+.spaceAround {
+    padding: 0 10px;
+}
+
+.partialBorder {
+    position: relative;
+    top: -13px;
+    z-index: 1111;
+}
+
+.transactionFormBlock {
+    // height: 50px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 3px;
+}
+
+.shift-details {
+    text-align: center;
+    color: #314056;
+    margin-top: -15px;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    display: flex;
+    flex-direction: row;
+    padding-left: 110px;
+    span {
+        margin: 5px;
+        border: 1px solid black;
+        padding: 5px;
+        font-size: 16px;
+    }
+    h5 {
+        padding: 5px 0;
+        font-weight: 700;
+        letter-spacing: 0.06rem;
+    }
+}
+
+.border-blue {
+    border: 1px solid #314056;
+}
+
+.fleetBtn {
+    padding: 10px 0px;
+    position: relative;
+    letter-spacing: 0.09rem;
+    font-size: 14px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    right: 0.80px;
+    width: 103px;
+}
+
+.disableDivs {
+    filter: blur(0.3rem);
+    cursor: not-allowed;
+}
+
+.blurJourneyTypes {
+    cursor: not-allowed;
+    filter: blur(0.0619rem);
+    button {
+        pointer-events: none;
+    }
+}
+
+.disableVehicleTypes {
+    cursor: not-allowed;
+    filter: blur(0.1rem);
+    div {
+        pointer-events: none;
+        input {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.fleetBtn:disabled,
+.mediaInput:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.fleetBtn:focus {
+    outline: none;
+}
+
+.fleetVehiclesBlock {
+    margin: 8px 0 5px;
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #314056;
+        margin-bottom: 10px;
+    }
+    input {
+        width: 50%;
+        background-color: #dde1e4;
+        padding: 5px;
+    }
+}
+
+.verticalTop {
+    position: relative;
+    top: 9px;
+}
+
+.screen-wrapper {
+    background-color: transparent;
+    position: relative;
+    top: 3px;
+}
+
+.screen {
+    height: 100%;
+}
+
+.journeyMenu {
+    height: auto;
+}
+
+.msg-box {
+    margin-top: 10px;
+}
+
+.msg-box textarea {
+    background-color: transparent;
+    padding: 5px 0 0 10px;
+    border: none;
+}
+
+.msg-box textarea::placeholder {
+    color: #314056;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.msg-box textarea:focus {
+    outline-width: 0;
+}
+
+.btnStyle {
+    color: white;
+    border: solid 2px #ff5a00;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    outline: none;
+    background-color: #f68517;
+    box-shadow: inset 0px 5px 5px 0 rgba(255, 255, 255, 0.6);
+}
+
+.signalsBlock {
+    padding-bottom: 13px;
+    padding-top: 11px;
+}
+
+.blackCircle {
+    width: 40px;
+    position: relative;
+}
+
+.indicators h4 {
+    font-size: 17px;
+}
+
+.gateImageBlock img {
+    padding: 2px;
+    width: 85px;
+    border: 1px solid black;
+}
+
+.greenBg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #00ff00;
+    display: inline-block;
+    left: -35px;
+    top: 11.5px;
+}
+
+.transactionFormBlock {
+    height: 439px;
+}
+
+.border {
+    border: 1px solid red !important;
+}
+
+.vehicleInfoList {
+    height: calc(100vh - 67px - 73px - 440px - 15px);
+    overflow: auto;
+}
+
+.transactionBlockExempt {
+    height: 440px;
+}
+
+.vehicleInfoListExempt {
+    height: calc(100vh - 67px - 73px - 440px - 15px);
+    overflow: auto;
+}
+
+.vehicleInfoList table {
+    width: 100%;
+    text-align: center;
+}
+
+.vehicleInfoList table thead {
+    background-color: #c1c1c1;
+    color: black;
+    font-weight: 700;
+}
+
+.vehicleInfoList table tbody {
+    color: black;
+    height: 300px;
+}
+
+.vehicleInfoList table thead tr td,
+.vehicleInfoList table tbody tr td {
+    padding: 2px 0 2px 5px;
+    border: solid 1px #5c5c5c;
+}
+
+.odd {
+    background-color: #dbdbdb !important;
+}
+
+.even {
+    background-color: #efefef !important;
+}
+
+.marginBottom {
+    margin-bottom: 10px;
+}
+
+.vehicleNoMsg {
+    font-size: 18px;
+    color: red;
+    margin-top: 40px;
+}
+
+.vehicleNoMsg~button {
+    margin: 10px;
+}
+
+.thumbsupIcon {
+    font-family: "FontAwesome" !important;
+}
+
+.crossIcon {
+    float: right;
+    position: relative;
+    top: -10px;
+    font-size: 25px;
+    left: 10px;
+    font-family: "FontAwesome" !important;
+}
+
+.mainFormWrapper {
+    border: 2px solid black;
+    padding: 5px 5px 26px;
+    height: 339px;
+}
+
+.upperCaseText {
+    text-transform: uppercase;
+}
+
+footer {
+    position: relative;
+    color: white;
+    background-color: #1a1a1a;
+    font-size: 10px;
+    overflow-y: hidden;
+    .contactUs {
+        float: right;
+        margin-top: -15px;
+        padding-right: 20px;
+    }
+}
+
+.inputError {
+    border: 3px solid red !important;
+}
+
+.inputSuccess {
+    border: 4px solid green !important;
+}
+
+.displayInlineBlock {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.tickBtns {
+    padding: 10px;
+    border: none;
+    background: #d8182a;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.vehicleMediaBlock {
+    width: 100%;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.customBtns {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.customBtns:focus {
+    box-shadow: none;
+}
+
+.dashboard-component {
+    padding: 15px;
+    overflow: auto;
+    .parent {
+        overflow: hidden;
+    }
+    .search-box {
+        width: 85%;
+    }
+    .filters {
+        table {
+            clear: both;
+            width: 100%;
+        }
+    }
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.dates input {
+    height: 34px;
+}
+
+select {
+    &.disabled {
+        cursor: not-allowed;
+        background: #dedede;
+    }
+}
+
+.alert-icon {
+    color: #ea5d5d;
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.errorMsg {
+    font-size: 28px;
+}
+
+.errorBlock {
+    text-align: center;
+}
+
+.nf-header {
+    margin-top: 100px;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.txnId {
+    word-break: break-all;
+}
+
+.wordBreak {
+    word-break: break-all;
+}
+
+.nf-header {
+    margin-top: 100px;
+}
+
+.IMSInfoTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 50%;
+        padding: 5px 10px;
+    }
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.hb-page-header h2 {
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f68517;
+    padding-left: 13px;
+}
+
+.customSelect {
+    padding: 8px;
+    margin-left: 10px;
+}
+
+.findBlock {
+    input {
+        width: 83%;
+        padding: 6px;
+    }
+    button {
+        padding: 7px 7px 7.5px;
+        font-weight: 900;
+        color: white;
+        background-color: #f68517;
+        border: 2px solid #ff5a00;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+    }
+}
+
+.formHeading {
+    position: relative;
+    top: -20px;
+    width: 50%;
+    margin: 0 auto;
+    clear: both;
+    padding: 10px 10px 20px;
+}
+
+.modal {
+    overflow-y: auto;
+}
+
+.crossIcon {
+    float: right;
+    font-family: "FontAwesome" !important;
+}
+
+.form-control {
+    height: calc(2.5rem + 2px);
+    background-color: #f2f4f8;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #12a4df;
+    ;
+}
+
+.form-control:disabled {
+    cursor: not-allowed;
+}
+
+.mediaInput {
+    border: 1px solid black;
+    height: 40px;
+    padding: 2px 8px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hideInput-1,
+.hideInput-2 {
+    display: none;
+}
+
+.showInput-1,
+.showInput-2 {
+    display: block;
+}
+
+.barcodeBtn {
+    position: relative;
+    left: 15px;
+}
+
+.removePadding {
+    padding: 10px 5px;
+    margin: 2px 4px;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.noCameraBlock img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Firefox old*/
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* IE */
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Opera and prob css3 final iteration */
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinkButton {
+    background-color: #4fb94f;
+    border: 2px solid #4fb94f;
+    -moz-animation: blink normal 1.3s infinite ease-in-out;
+    /* Firefox */
+    -webkit-animation: blink normal 1.3s infinite ease-in-out;
+    /* Webkit */
+    -ms-animation: blink normal 1.3s infinite ease-in-out;
+    /* IE */
+    animation: blink normal 1.3s infinite ease-in-out;
+    /* Opera and prob css3 final iteration */
+}
+
+.blinkButtonRed {
+    background-color: #fb0707;
+    border: 2px solid #fb0707;
+    -moz-animation: blink normal 1.3s infinite ease-in-out;
+    /* Firefox */
+    -webkit-animation: blink normal 1.3s infinite ease-in-out;
+    /* Webkit */
+    -ms-animation: blink normal 1.3s infinite ease-in-out;
+    /* IE */
+    animation: blink normal 1.3s infinite ease-in-out;
+}
+
+.blinkImg {
+    -moz-animation: blink normal 1s infinite ease-in-out;
+    /* Firefox */
+    -webkit-animation: blink normal 1s infinite ease-in-out;
+    /* Webkit */
+    -ms-animation: blink normal 1s infinite ease-in-out;
+    /* IE */
+    animation: blink normal 1s infinite ease-in-out;
+    /* Opera and prob css3 final iteration */
+}
+
+.borderRed {
+    border: 6px solid red;
+}
+
+.greenBorder {
+    border: 6px solid #42762a;
+}
+
+.violationBtn {
+    -webkit-border-radius: 10px;
+    border-radius: 15px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 16px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+    margin: 3px 0 7px;
+    width: 85%;
+}
+
+.SCInfoWrapper {
+    font-size: 20px;
+}
+
+.BRInfoWrapper {
+    font-size: 22px;
+}
+
+.SCInfoWrapper,
+.BRInfoWrapper {
+    padding: 20px 0 0;
+}
+
+.highlightText {
+    font-weight: 900;
+}
+
+.commonBtns {
+    padding: 12px 0px;
+    position: relative;
+    letter-spacing: 0.09rem;
+    font-size: 14px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    right: 1.5px;
+    color: white;
+    border: solid 2px #ff5a00;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    outline: none;
+    background-color: #f68517;
+    box-shadow: inset 0px 5px 5px 0 rgba(255, 255, 255, 0.6);
+    width: 85px;
+}
+
+.resetOHLSBtn {
+    align-self: center;
+}
+
+.resetOHLSBtn button {
+    padding: 12px 15px;
+    position: relative;
+    letter-spacing: 0.09rem;
+    font-size: 17px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    color: white;
+    border: solid 2px #ff5a00;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    outline: none;
+    background-color: #f68517;
+    box-shadow: inset 0px 5px 5px 0 rgba(255, 255, 255, 0.6);
+    top: 5px;
+}
+
+.commonTowedBtns {
+    padding: 12px 0px;
+    position: relative;
+    letter-spacing: 0.09rem;
+    font-size: 14px;
+    margin: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    right: 1.5px;
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    outline: none;
+    box-shadow: inset 0px 5px 5px 0 rgba(255, 255, 255, 0.6);
+    width: 85px;
+}
+
+.decFntSize {
+    font-size: 15px !important;
+}
+
+.exemptViolation {
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 2px 0 7px;
+}
+
+.fleetForm .select:disabled {
+    cursor: not-allowed;
+}
+
+.customFreeBtns {
+    margin: 0 10px;
+}
+
+@-webkit-keyframes glowing {
+    0% {
+        background-color: #B20000;
+        -webkit-box-shadow: 0 0 3px #B20000;
+    }
+    50% {
+        background-color: #FF0000;
+        -webkit-box-shadow: 0 0 40px #FF0000;
+    }
+    100% {
+        background-color: #B20000;
+        -webkit-box-shadow: 0 0 3px #B20000;
+    }
+}
+
+@-moz-keyframes glowing {
+    0% {
+        background-color: #B20000;
+        -moz-box-shadow: 0 0 3px #B20000;
+    }
+    50% {
+        background-color: #FF0000;
+        -moz-box-shadow: 0 0 40px #FF0000;
+    }
+    100% {
+        background-color: #B20000;
+        -moz-box-shadow: 0 0 3px #B20000;
+    }
+}
+
+@-o-keyframes glowing {
+    0% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+    50% {
+        background-color: #FF0000;
+        box-shadow: 0 0 40px #FF0000;
+    }
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+    50% {
+        background-color: #FF0000;
+        box-shadow: 0 0 40px #FF0000;
+    }
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+}

@@ -1,0 +1,259 @@
+/* You can add global styles to this file, and also import other style files */
+
+// cutomize default scroll bar
+::-webkit-scrollbar {
+    width: 5px;
+    background: lightgray;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #818286;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #868686;
+}
+
+::-moz-scrollbar {
+    width: 5px;
+    background: lightgray;
+}
+
+::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #818286;
+    border-radius: 15px;
+}
+
+::-moz-scrollbar-thumb {
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #868686;
+}
+
+html {
+
+    
+    font-size: 14px;
+  }
+  
+
+
+
+body {
+    margin: 0;
+   
+ 
+    background: white;
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.form-group {
+    .info {
+        opacity: 0.7;
+        font-size: 0.8rem;
+    }
+    .error {
+        font-size: 0.8rem;
+        color: red;
+    }
+    .kyc-status {
+        margin-left: 10px;
+        height: 100%;
+        line-height: 33px;
+        color: green;
+    }
+}
+
+.users-component.page,
+.profile-component.page,
+.search-component.page,
+.search-history-component.page,
+.complaints-component.page,
+.billing-component.page {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    .page-sidebar {
+        width: 16.5%;
+        background: #282935;
+        color: #fff;
+        position: fixed;
+        height: calc(100% - 60px);
+        top: 60px;
+    }
+    .page-content {
+        width: 83.5%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 15px;
+        margin-left: 16.5%;
+        height: 100%;
+        .hb-page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            // background: #737373;
+            background: #ffffff;
+            color: #000;
+            padding: 10px 15px 12px;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e2e2;
+            h4 {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                color: #41a0a7!important;
+            }
+            input[type="text"] {
+                padding: 2px 6px;
+                border: 1px solid #f3eeee;
+            }
+            button {
+                margin-left: -4px;
+                padding: 3px 10px;
+                background: #0f7ecf;
+                color: #fff;
+                border: none;
+            }
+        }
+        .hb-page-content {
+            padding: 0 0px;
+            .user-added-details {
+                background: #fff;
+            }
+            .custom-form {
+                width: 450px;
+                background: #fff;
+                padding: 10px;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+            }
+            button,
+            .btn-dark {
+                color: #fff7f7;
+                background-color: #1487bd;
+                border-color: #1487bd;
+                padding: 6px 22px;
+                border-radius: 5px;
+                i {
+                    margin-right: 5px;
+                }
+                &:hover {
+                    background-color: #1487bd;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            table,
+            .ngx-columns {
+                margin-bottom: 0;
+                background: #fff;
+                border: 1px solid #f4f4f4;
+                thead {
+                    background: #3b4354;
+                    tr {
+                        border-bottom: 3px solid #dedede;
+                        font-family: 'Lato', sans-serif;
+                        td,
+                        th {
+                            color: #fff;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                            font-size: 13px;
+                            vertical-align: middle;
+                            padding: 0.75rem !important;
+                            select {
+                                width: 100%;
+                                border: none;
+                                padding: 3px 4px;
+                                border-radius: 3px;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        border-bottom: 1px solid #e4e4e4;
+                        td {
+                            border-top: none;
+                            text-transform: capitalize;
+                            color: #555;
+                            vertical-align: middle;
+                            button {
+                                border: none;
+                                padding: 8px 16px;
+                                border-radius: 4px;
+                                margin-left: 10px;
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+                            span {
+                                display: block;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ngx-container {
+    padding: 0;
+    .ngx-columns {
+        width: 100%;
+        margin-left: 0;
+        .ngx-table__column-resizer {
+            width: 1px;
+        }
+        .ngx-table {
+            tbody {
+                tr {
+                    td {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bs-datepicker {
+    position: relative;
+    z-index: 1;
+    right: 72px;
+    bs-days-calendar-view {
+        .bs-datepicker-head {
+            background-color: #f68018 !important;
+        }
+        .bs-datepicker-body {
+            table {
+                td {
+                    span.selected {
+                        background-color: #f68018 !important;
+                    }
+                }
+                td.week {
+                    span {
+                        color: #f68018 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popover {
+    max-width: 600px;
+    width: 350px;
+}

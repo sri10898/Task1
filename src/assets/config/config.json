@@ -1,0 +1,21 @@
+{
+    "dev": {
+        "HOST_NAME": "http://192.168.1.110:8884",
+
+        "SOCKET_URL": "ws://192.168.1.110:8884/webSocketService/bhariSocketHandler",
+        "LOGS_ENABLED": true,
+        "SOCKET_LOGS": true,
+        "KEYBOARD_SHORTCUTS": true,
+        "DEVICE_CHANGES": "http://192.168.1.110:9884"
+    },
+    "prod": {
+        "HOST_NAME": "http://localhost:8884",
+
+        "SOCKET_URL": "ws://localhost:8884/webSocketService/bhariSocketHandler",
+        "LOGS_ENABLED": true,
+        "KEYBOARD_SHORTCUTS": true,
+        "SOCKET_LOGS": true,
+        "DEVICE_CHANGES": "http://localhost:9884"
+    },
+    "env": "dev"
+}

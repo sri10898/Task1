@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="title">Lane Application</h1>
+    <div class="card">
+        <div class="left text-center">
+            <img *ngIf="existingLogo" [src]="existingLogo" alt="" class="left">
+            <br>
+            <h4 *ngIf="address">{{address}}</h4>
+        </div>
+        <div class="right">
+            <form [formGroup]="loginForm" (submit)="onSubmit()" class="login-form" *ngIf="loading">
+                <div class="form-input">
+                    <input type="text" id="username" placeholder="username" formControlName="username" (keypress)="omit_special_char(evt)" maxlength="20">
+                    <label for="username"> <i class="fa fa-user"></i>username</label>
+
+                </div>
+                <p class="error" *ngIf="loginForm.controls.username.dirty && loginForm.controls.username.errors?.required">Username cannot be blank.</p>
+                <div class="form-input">
+                    <input type="password" id="password" placeholder="*********" formControlName="plainTextPassword">
+                    <label for="password"> <i class="fa fa-lock"></i>password</label>
+                </div>
+                <p class="error" *ngIf="loginForm.controls.plainTextPassword.dirty && loginForm.controls.plainTextPassword.errors?.required">Password cannot be blank.</p>
+
+                <input type="submit" class="btn loginBtn" value="LOGIN" [disabled]="loginForm.invalid">
+            </form>
+        </div>
+
+    </div>
+    <toaster-container [toasterconfig]="config"></toaster-container>
+</div>

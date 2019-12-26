@@ -1,0 +1,20 @@
+[2019-08-22 10:49:38.879] [exthost] [info] extension host started
+[2019-08-22 10:49:38.977] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"activationEvent":"onLanguage:scss"}
+[2019-08-22 10:49:38.977] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/css-language-features/client/dist/cssMain
+[2019-08-22 10:49:39.032] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"activationEvent":"onLanguage:scss"}
+[2019-08-22 10:49:39.032] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-08-22 10:49:39.059] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-08-22 10:49:39.059] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html-language-features/client/dist/htmlMain
+[2019-08-22 10:49:39.145] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-08-22 10:49:39.145] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/ecmel.vscode-html-css-0.2.0/out/src/extension
+[2019-08-22 10:49:39.392] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-08-22 10:49:39.392] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-08-22 10:49:39.395] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-08-22 10:49:39.395] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-08-22 10:49:39.518] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-08-22 10:49:39.518] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-08-22 10:49:39.525] [exthost] [info] ExtensionService#_doActivateExtension boukichi.watch-run {"startup":true,"activationEvent":"*"}
+[2019-08-22 10:49:39.525] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/boukichi.watch-run-0.3.1/out/extension
+[2019-08-22 10:49:39.526] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2019-08-22 10:49:39.526] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/michelemelluso.code-beautifier-2.3.3/out/src/extension
+[2019-08-22 10:49:39.552] [exthost] [info] eager extensions activated

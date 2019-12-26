@@ -1,0 +1,4 @@
+[2019-08-22 10:57:25.839] [renderer1] [error] Error: [File Watcher (chockidar)] Inotify limit reached (ENOSPC)
+[2019-08-22 10:57:25.851] [renderer1] [error] [File Watcher (chockidar)] Inotify limit reached (ENOSPC)
+[2019-08-22 14:01:13.319] [renderer1] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?)). Details: Keys: workbench.sidebar.hidden Length: 4
+[2019-08-22 14:01:14.944] [renderer1] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (DELETE FROM ItemTable WHERE key IN (?,?)). Details: Keys: workbench.sidebar.hidden, workbench.sidebar.activeviewletid

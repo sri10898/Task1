@@ -1,0 +1,293 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+> git config --get commit.template
+Open repository: /home/rohinsha/fe_lane_application
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/toll-screen/toll-screen.component.scss
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/login/login.component.ts
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/core/services/session.service.ts
+> git check-ignore -v -z --stdin
+> git show :Backups/e4c1ce66326b3dac25b9ab84b887d43f/file/d78d614b07a3dd7f739e1c9484d3c07c
+> git ls-files --stage -- Backups/e4c1ce66326b3dac25b9ab84b887d43f/file/
+> git check-ignore -v -z --stdin
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/toll-screen/toll-screen.component.scss
+> git show :src/app/login/login.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/toll-screen/toll-screen.component.scss
+> git show :src/app/app.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/app.routing.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/app.routing.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/app.routing.ts
+> git show :src/app/toll-screen/toll-screen.component.html
+> git show :src/app/toll-screen/toll-screen.component.scss
+> git show :src/app/app.routing.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git check-ignore -v -z --stdin
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/app.component.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/toll-screen.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/core/services/cache.service.ts
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :src/app/core/core.module.ts
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :src/app/core/services/util.service.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/core/services/users.service.ts
+> git show :src/app/core/services/users.service.spec.ts
+> git show :src/app/core/services/user.service.ts
+> git show :src/app/core/services/transactiontype.service.ts
+> git show :src/app/core/services/search.service.ts
+> git show :src/app/core/services/shifts.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git check-ignore -v -z --stdin
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/search.service.ts
+> git show :src/app/core/services/search.service.spec.ts
+> git show :src/app/core/services/rest.service.ts
+> git show :src/app/core/services/plaza.service.ts
+> git show :src/app/core/services/media.service.ts
+> git check-ignore -v -z --stdin
+> git show :src/app/core/services/logger.service.ts
+> git show :src/app/core/services/lane.service.ts
+> git show :src/app/core/services/logger.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/logger.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/util.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/gcs.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/core/services/configurations.service.ts
+> git show :src/app/core/services/event-emitter.service.spec.ts
+> git show :src/app/core/services/event-emitter.service.ts
+> git show :src/app/core/services/configurations.service.ts
+> git show :src/app/core/services/plaza.service.ts
+> git show :src/app/core/services/rest.service.ts
+> git show :src/app/core/services/search.service.ts
+> git show :src/app/core/services/shifts.service.spec.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/search.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/app.component.ts
+> git check-ignore -v -z --stdin
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/session.service.spec.ts
+> git show :src/app/core/services/shifts.service.spec.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/logger.service.ts
+> git show :src/app/core/services/logger.service.spec.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/logger.service.ts
+> git show :src/app/app.component.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/core/services/logger.service.spec.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/socket.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/app.component.ts
+> git show :src/app/app.routing.ts
+> git show :src/app/app.module.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/core/services/logger.service.spec.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/services/app.service.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/logger.service.spec.ts
+> git show :src/app/core/services/logger.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/core.module.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/session.service.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/core/services/logger.service.spec.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/core/guards/auth.guard.ts
+> git show :src/app/login/login.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts
+> git show :src/app/app.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/login/login.component.ts
+> git show :src/app/login/login.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/app.component.ts
+> git show :src/app/toll-screen/toll-screen.component.ts
+> git show :src/app/app.component.ts

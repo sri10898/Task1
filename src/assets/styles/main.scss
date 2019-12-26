@@ -1,0 +1,527 @@
+html{
+	font-size: 13px!important;
+}
+body{
+	background-color: #e5e7e5 !important;
+	& > hb-root{
+		& > hb-search-result-page{
+			& > .search-result-page-component{
+				width: 80%;
+				margin: 20px auto;
+			}
+		}
+	}
+}
+// Helpers
+@import "./helpers/variables";
+@import "./helpers/mixins";
+
+// // Vendors BS
+// @import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
+// Vendors Angular theme
+@import "../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+// layout
+@import "./layout/structure";
+
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+/// Color Variables ///
+
+ // Black Shade Colors //
+$bodycolor:#f2f4f8;
+$gray-primary: #191919;
+$gray-secondary: #282828;
+$dark-gray: #808286;
+
+ // Option Colors //
+
+
+ // Brand Colors //
+$primary: #f68015;
+$primary-dark: #e17513;
+$primary-disable: #ffbe84;
+$info: #12a4df;
+
+// Bootstrap Customized CSS
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus{
+	box-shadow: none;
+}
+
+.form-control{
+	height: calc(2.5rem + 2px);
+	background-color: #f2f4f8;
+}
+.form-control:focus{
+	box-shadow: none;
+	border-color: $info;
+}
+.btn{
+	padding: 0.375rem 1rem;
+	line-height: 1.82;
+}
+.btn-sm, .btn-group-sm > .btn{
+	padding: 0.25rem 0.5rem!important;
+    line-height: 1.5!important;
+}
+.btn-primary {
+    color: white!important;
+    background-color: $primary;
+	border: 1px solid $primary;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: $primary-dark!important;
+	box-shadow: none!important;
+	border: 1px solid $primary!important;
+}
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary.disabled:hover,
+.btn-primary:disabled:hover {
+    background-color: $primary-disable!important;
+	border-color: $primary-disable!important;
+	pointer-events: none;
+}
+.btn-outline-primary {
+  color: $primary!important;
+  background-color: transparent;
+  background-image: none;
+  border-color: $primary;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+  color:white!important;
+  background-color: $primary;
+  border-color: $primary;
+  box-shadow: none;
+}
+
+// Modal Dialog
+.hb-dialog-overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #252525;
+	opacity: .8;
+	z-index: 700;
+}
+.hb-dialog-main-wrapper{
+	.hb-dialog{
+		position: absolute;
+		min-width: 50%;
+		max-width: 75%;
+		height: auto;
+		background-color: #fff;
+		z-index: 800;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		border-radius: 10px;
+		overflow: hidden;
+		.hb-dialog-header{
+			//background-color: #f6851f;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6851f+0,db7208+100 */
+            background: #f6851f; /* Old browsers */
+            background: -moz-linear-gradient(top, #f6851f 0%, #db7208 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #f6851f 0%,#db7208 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #f6851f 0%,#db7208 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6851f', endColorstr='#db7208',GradientType=0 ); /* IE6-9 */
+            padding: 10px 20px;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 10px 10px 0 0;
+			border: 1px solid #b85d0c;
+			margin: -1px;
+		}
+		.hb-dialog-body{
+			padding: 10px 20px;
+            position: relative;
+            z-index: 2;
+            border-left: 1px solid #f1efef;
+            border-right: 1px solid #f1efef;
+		}
+		.hb-dialog-footer{
+			padding: 15px;
+			box-shadow: 0 0 50px #d3d3d3 inset;
+		}
+	}
+}
+
+// .btn-outline-primary:focus, .btn-outline-primary.focus {
+//   box-shadow: 0 0 0 0.2rem $primary;
+// }
+.hb-logout-wrapper{
+	.hb-dialog{
+		min-width: 40%!important;
+	}
+}
+//	App Container
+.app-container{
+	.app-container-left{
+		max-width: 250px;
+		min-width: 250px;
+		width: 100%;
+		background-color: $gray-primary;
+		-webkit-box-shadow: 0 -10px 10px gray;
+    	box-shadow: 0 -10px 10px gray;
+    	z-index: 1;
+		.logo-wrapper{
+			background-color: white;
+			max-height: 60px;
+		}
+		.main-nav{
+			color: white;
+			height: calc(100% - 60px);
+   			overflow: auto;
+			.list-group-item{
+				background-color: $gray-primary;
+				border: none;
+				border-bottom: 1px solid black;
+				margin-bottom: 0;
+				cursor: pointer;
+				a{
+					color: white;
+					text-decoration: none;
+					i{
+						font-size: 16px;
+					}
+					.fa-stack{
+						width: 13px;
+					    height: 1em;
+					    line-height: 1em;
+					    .fa-stack-1x{
+							font-size: 17px;
+							left: -2px;
+					    }
+						.fa-cog{
+							color: black;
+						    font-size: 9px;
+						    top: 4px;
+						    left: 0px;
+						}
+						.fa-lock{
+							font-size: 9px;
+						    top: 0px;
+						    left: -1px;
+						}
+						.fa-circle-o{
+							font-size: 17px;
+						}
+						.fa-exclamation-triangle{
+							font-size: 7px;
+						    top: 0px;
+						    left: -1px;
+						}
+						.fa-clock-o{
+							font-size: 12px;
+							color: black;
+						}
+					}
+					.fa-credit-card-alt{
+						font-size: 13px;
+					}
+				}
+				.list-group{
+					margin: 0.75rem -1.25rem -0.75rem;
+				}
+				&:first-child{
+					border-top-left-radius: 0rem;
+    				border-top-right-radius: 0rem;
+				}
+				&:last-child{
+					border: none;
+				}
+				&:hover, &.active{
+					background-color: $primary;
+				}
+				&.social-search{
+					a{
+						.fa-stack{
+							.fa-users{
+								font-size: 4px;
+							    top: 0px;
+							    left: -1px;
+							}
+						}
+					}
+				}
+				&.search-history-menu{
+					i{
+						font-size: 17px;
+					}
+				}
+
+			}
+
+		}
+		.main-nav{
+			& > .list-group {
+				& > .list-group-item{
+					background-color: black;
+					border: none;
+					border-bottom: 1px solid $gray-primary;
+					& > a{
+						font-size: 1.1rem;
+					}
+				}
+				.list-group{
+					.list-group-item{
+						padding-left: 30px;
+					}
+				}
+			}
+		}
+		.menu-toggle-icon{
+			background-color: $gray-secondary;
+			height: 40px;
+			i{
+				color: $dark-gray;
+			}
+		}
+	}
+	.app-container-right{
+    overflow:auto;
+		.hb-page-header{
+			position: absolute;
+		    top: -38px;
+			left: 15px;
+			h5{
+				font-weight: bold;
+				font-size: 1.35em;
+			}
+		}
+		.hb-page-content-wrapper{
+			// overflow: auto;
+			height:auto;
+			position: relative;
+			.hb-quick-search-wrapper{
+				background-color: white;
+				padding: 10px 15px;
+				.main-search{
+					.expand-info-btn{
+						max-width: 136px;
+						width: 100%;
+					}
+				}
+			}
+			.searching{
+				text-align: center;
+				.loader{
+					width: 40px;
+    				margin: 0 auto;
+				}
+			}
+		}
+		.candidate-search-result-wrapper{
+			.candidate-search-result{
+				background-color: white;
+			}
+		}
+		.results{
+			.pagination{
+				position: absolute;
+				top: -3px;
+				right: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+.possible-search-results-wrapper{
+	margin-left: 0px;
+    overflow: auto;
+    height: calc(100% - 20vh);
+    padding-right: 15px;
+	margin-top: 15px;
+	.search-result-component{
+		margin-top: 0!important;
+    	margin-bottom: 0!important;
+	}
+}
+.search-by-skills-component{
+	.pagination{
+		position: absolute;
+		right: 15px;
+		top: 65px;
+		margin: 0;
+	}
+}
+.pagination{
+	.page-item{
+		.page-link{
+			color: $primary;
+			border: 1px solid lightgray;
+			&:hover{
+				background-color: $primary;
+				border-color: $primary;
+				color: white;
+			}
+			&:focus{
+				box-shadow: none;
+			}
+		}
+		&.active{
+			.page-link{
+				background-color: $primary;
+				border-color: $primary;
+				color: white;
+				&:hover{
+					background-color: $primary;
+					border-color: $primary;
+					color: white;
+				}
+			}
+		}
+	}
+}
+.ngx-pagination{
+	margin: 10px 0;
+    position: absolute;
+    right: 15px;
+	.current{
+		background-color: $primary!important;
+		border-color: $primary;
+		color: white!important;
+	}
+	li{
+		color: $primary!important;
+		border: 1px solid lightgray;
+		background-color: white;
+		&:hover{
+			background-color: $primary!important;
+			color: white!important;
+		}
+		&:focus{
+			box-shadow: none;
+		}
+	}
+	a{
+		color: $primary!important;
+		&:hover{
+			background-color: $primary!important;
+			color: white!important;
+		}
+		&:focus{
+			box-shadow: none;
+		}
+	}
+}
+.transaction-history-component{
+	.transaction-history-info{
+		.ngx-container {
+			height: calc(100% - 114px);
+			.ngx-columns {
+				&:nth-child(2){
+					background-color: white;
+					max-height: calc(100% - 50px);
+					overflow: auto;
+					height: 100%;
+				}
+			}
+		}
+		.table-actions-list{
+			background-color: white;
+		}
+	}
+}
+.manage-users-component{
+	.ngx-container {
+		height: calc(100% - 0px)!important;
+		.ngx-table{
+			tbody{
+				td{
+					.user-status {
+						color: red;
+						&.active {
+							color: green;
+						}
+						i{
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.complaints-history-info, .payment-history-component, .manage-users-component{
+	.ngx-container {
+		height: calc(100% - 48px);
+		.ngx-columns {
+			&:nth-child(2){
+				background-color: white;
+				max-height: calc(100% - 50px);
+				height: 100%;
+				overflow: auto;
+			}
+		}
+	}
+	.table-actions-list{
+		background-color: white;
+	}
+}
+.ngx-table{
+	background-color: white;
+	thead{
+		background-color: $gray-secondary;
+		tr{
+			border-bottom: none;
+			th{
+				border-bottom: none;
+				padding: 10px 8px!important;
+				color: white;
+				.ngx-table__column-resizer{
+					background-color: #565656;
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				i{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.search-history-component{
+	.hb-page-content{
+		.ngx-container{
+			height: calc(100% - 48px);
+			.ngx-columns {
+				&:nth-child(2){
+					background-color: white;
+					max-height: calc(100% - 70px);
+					height: 100%;
+					overflow: auto;
+				}
+			}
+		}
+	}
+}
+.footer-wrapper{
+	background-color: $gray-primary;
+	color: lightgray;
+	a{
+		color: lightgray;
+		text-decoration: underline;
+		cursor: pointer;
+		&:hover, &:focus{
+			text-decoration: none;
+			color: lightgray;
+		}
+	}
+}

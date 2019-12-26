@@ -1,0 +1,28 @@
+[2019-08-24 16:22:41.223] [exthost] [info] extension host started
+[2019-08-24 16:22:41.316] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"activationEvent":"onLanguage:scss"}
+[2019-08-24 16:22:41.316] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/css-language-features/client/dist/cssMain
+[2019-08-24 16:22:41.387] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"activationEvent":"onLanguage:scss"}
+[2019-08-24 16:22:41.387] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-08-24 16:22:41.416] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-08-24 16:22:41.416] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-08-24 16:22:41.432] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-08-24 16:22:41.432] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-08-24 16:22:41.591] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-08-24 16:22:41.591] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-08-24 16:22:41.599] [exthost] [info] ExtensionService#_doActivateExtension boukichi.watch-run {"startup":true,"activationEvent":"*"}
+[2019-08-24 16:22:41.599] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/boukichi.watch-run-0.3.1/out/extension
+[2019-08-24 16:22:41.601] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2019-08-24 16:22:41.601] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/michelemelluso.code-beautifier-2.3.3/out/src/extension
+[2019-08-24 16:22:41.657] [exthost] [info] eager extensions activated
+[2019-08-24 16:22:50.247] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-08-24 16:22:50.247] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2019-08-24 16:22:50.306] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-08-24 16:22:50.307] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-08-24 16:22:50.401] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-08-24 16:22:50.401] [exthost] [info] ExtensionService#loadCommonJSModule /home/rohinsha/.vscode/extensions/ecmel.vscode-html-css-0.2.3/dist/extension
+[2019-08-24 16:23:01.283] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-24 16:23:01.284] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-08-24 16:23:01.295] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-24 16:23:01.295] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-08-24 16:25:16.899] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-08-24 16:25:16.899] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html-language-features/client/dist/htmlMain

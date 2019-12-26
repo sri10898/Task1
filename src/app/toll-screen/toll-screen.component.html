@@ -1,0 +1,278 @@
+<div class="container-fluid ">
+    <header class="row">
+        <div class="headerLeft">
+            <!-- <img src="assets/images/Bhari-Logo.png" alt="" class=""> -->
+            <img *ngIf="existingLogo" [src]="existingLogo" alt="" class="">
+        </div>
+        <div class="headerCenter">
+            <h3 *ngIf="plazaName">{{plazaName}}</h3>
+            <h4 *ngIf="address">{{address}}</h4>
+        </div>
+        <div class="headerRight">
+            <p>{{currentDate}} {{currentTime}}</p>
+            <button (click)="openLogoutDialog()">Logout</button>
+        </div>
+    </header>
+
+    <!-- <div class="maintainanceMsgAlert"> -->
+    <!-- <p *ngIf="maintainanceMsgAlert">...The application is going under maintainance on 20-04-2019pm.</p> -->
+    <!-- </div> -->
+
+    <div class="row spaceAround">
+        <div class="shiftBlock col-sm-6">
+            <h4 class="blockHeading">Shift Details</h4>
+            <div class="shift-details" *ngIf="currentShiftInfo">
+                
+                <span>{{shiftStartTime}}</span>
+                <span>{{shiftEndTime}}</span>
+                <span>{{currentShiftInfo.shiftName}}</span>
+                <span>{{currentShiftInfo.loginName}}</span>
+                <span>{{currentShiftInfo.laneName}}</span>
+            </div>
+        </div>
+        <div class="deviceStatusBlock col-sm-4">
+               
+            <h4 class="blockHeading">Device Status</h4>
+            <div class="deviceStatus" *ngFor="let device of deviceStatusResponse">
+               
+                <img src="assets/images/lane-camera.svg" alt="Lane Camera" *ngIf="device.deviceType=='LANE_CAMERA'" [ngClass]="[device.deviceType=='LANE_CAMERA' && device.status=='DISCONNECTED' ? 'blinkImg borderRed' : 'greenBorder']">
+                <img src="assets/images/smart-card.svg" alt="Smart Card" *ngIf="device.deviceType=='SMART_CARD'" [ngClass]="[device.deviceType=='SMART_CARD' && device.status=='DISCONNECTED' ? 'blinkImg borderRed' : 'greenBorder']">
+                <img src="assets/images/printer-copy.svg" class="printerImg" alt="Lane Printer" *ngIf="device.deviceType=='LANE_PRINTER'" [ngClass]="[device.deviceType=='LANE_PRINTER' && device.status=='DISCONNECTED' ? 'blinkImg borderRed' : 'greenBorder']">
+                <img src="assets/images/ohlslights.svg" alt="OHLS" *ngIf="device.deviceType=='OHLS'" [ngClass]="[device.deviceType=='OHLS' && device.status=='DISCONNECTED' ? 'blinkImg borderRed' : 'greenBorder']">
+                <img src="assets/images/avcc.svg" alt="AVCC" *ngIf="device.deviceType=='AVCC'" [ngClass]="[device.deviceType=='AVCC' && device.status=='DISCONNECTED' ? 'blinkImg borderRed' : 'greenBorder']">
+                <img src="assets/images/ufd.svg" alt="UFD" *ngIf="device.deviceType=='UFD'" [ngClass]="[device.deviceType=='UFD' && device.status=='DISCONNECTED' ? 'blinkImg borderRed' : 'greenBorder']">
+            </div>
+        </div>
+        <div class="col-sm-2 text-center resetOHLSBtn">
+            <button (click)="resetOHLSFunc()">RESET OHLS</button>
+        </div>
+    </div>
+
+    <main class="row  media-body spaceAround marginTop">
+        <div class="col-12 col-lg-5">
+            <div>
+                <div class="screen-wrapper">
+                    <div class="screen">
+                        <iframe width="560" height="440" *ngIf="camUrl" [src]="camUrl" frameborder="0" scrolling="no" align="left" allowfullscreen allow="autoplay">Your browser are not supported iframe.</iframe>
+                        <div *ngIf="!camUrl" class="noCameraBlock">
+                            <button class="refreshButton" (click)="refreshFun()">
+                                <i *ngIf="!refreshButton" class="fa fa-refresh refreshIcon" area-hiden="true"></i>
+                                <i *ngIf="refreshButton" class="fa fa-refresh refreshIcon fa-spin" area-hiden="true" style="font-size:40px"></i>
+                            </button>
+                            <img src="assets/images/noCamera.png" alt="Camera not available">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-1">
+            <div class="">
+                <div class="fleetBlock text-center">
+                    <button class="commonBtns" (click)="openFreeDialog()">Free</button>
+                </div>
+                <div class="fleetBlock text-center">
+                    <button class="commonBtns" (click)="toggleFleetBtn()" [disabled]="isTowedTxn">{{fleetStatus}}</button>
+                </div>
+              
+                <div class="fleetBlock text-center">
+                    <button *ngIf="isTowedTxn === false && finishTowed===false" class="commonBtns" (click)="toggleTowedBtn()">Towed</button>
+                    <button *ngIf="isTowedTxn === true && finishTowed === false" class="commonTowedBtns" [ngClass]="{'blinkButton':isTowedTxn===true}">Towed started
+                    </button>
+                    <button *ngIf="finishTowed === true" class="commonTowedBtns" [ngClass]="{'blinkButtonRed':finishTowedErr === false}" (click)="finishTowedTxnFun()">Towed finish</button>
+                </div>
+
+               
+                <div class="indicators text-center ">
+                    <h4 class="blockHeading ">Toll Gate</h4>
+                    <div class="signalsBlock">
+                        <img [src]='signalImgSrc' class="circle" alt="">
+                    </div>
+                    <div class="gateImageBlock">
+                        <img [src]='gateImgSrc' alt="">
+                    </div>
+                </div>
+                <div class="fleetBlock text-center">
+                    <button class="fleetBtn btnStyle exemptBtn" (click)="toggleExemptEmergencyBtn() " [disabled]="isTowedTxn">Exempt Emergency</button>
+                </div>
+           
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="" [ngClass]="[isFleetOn ? 'disableDivs' : '', isSCIssued ? 'disableDivs' : '']">
+                <div class="transactionFormBlock" [ngClass]="[isFleetOn ? 'disableDivs' : '']">
+                    <form [formGroup]="laneForm" *ngIf="laneForm && laneForm.controls" (submit)="submitTxnDetails($event)" class="laneForm">
+                        <div class="form-group row align-items-center p-0">
+                            <div class="col-sm-6" [hidden]="isSCIssued">
+                                <input type="text" class="form-control vehicleNumber " formControlName="vehicleNumber" (keypress)="omit_special_char($event)" #vehicleNumber autofocus [ngClass]="(laneForm.controls.vehicleNumber.errors &&  (laneForm.controls.vehicleNumber.dirty || laneForm.controls.vehicleNumber.touched) ||laneForm.controls.vehicleNumber.value==='') ? 'inputError':'inputSuccess'"
+                                    placeholder="VEHICLE NUMBER" maxlength="12" />
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="flexBox">
+
+                                 
+                                    <input type="text" class="mediaInput" (keypress)="lettersAndNumbersOnly($event)" placeholder="Barcode Number" #barcodeDevice >
+                                    <button class="commonBtns" (click)="onBarcodeSubmit()" type="button" [disabled]="activeSubmitBtn===false">SUBMIT</button>
+                                </div>
+                                <div class="flexBox">
+                                   
+                                    <input type="text" class="mediaInput" (keypress)="lettersAndNumbersOnly($event)" placeholder="Smartcard Number" #SCDevice>
+                                    <button class="commonBtns" (click)="onSCSubmit()" type="button" [disabled]="activeSCSubmitBtn===false">READ</button>
+                                </div>
+                            </div>
+
+                        </div>
+                  
+                        <div class="form-group row p-0" [ngClass]="[isFreeTxnsOn ? 'disableDivs' : '']">
+                            <div class="col-sm-6">
+                                <div class="vehicleTypeBlock row" formArrayName="vehicleTypes" [ngClass]="!isVehicleNoEntered ? 'disableVehicleTypes' : ''">
+                                    <div class="col-4" *ngFor="let vehicle of laneForm.get('vehicleTypes').controls; let i=index" (click)="getTheFareOfVehicle(vehicle.value)">
+                                        <input type="button" class="vehicleType" [formControlName]="i"   (click)="vehicleTypechange($event,vehicle)" [style.background-color]="vehicle.touched ? '
+                                        #f68517' : '#353535'"  [ngClass]="vehicleTypeCopy==='' ? 'inputError':''"  tabindex="-1"  >
+                                    </div>
+                                    <div class="col-8 text-center" *ngIf="isViolationActive===true">
+                                        <button  class="btn finishTxn btnStyle violationBtn" [ngClass]="[hideOpClass ? 'exemptViolation' : 'violationBtn']">Violation started</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mainFormWrapper">
+                                    <div class="form-group row p-0">
+                                        <div class="col-sm-12">
+                                            <div class="vehicleTypeBlock row" formArrayName="journeyTypesBtns">
+                                                <div class="col-6 text-center" *ngFor="let journeyType of laneForm.get('journeyTypesBtns').controls; let i=index" (click)="selectedFareType(journeyType.value)">
+                                                    <input type="button" class="journeyType" [formControlName]="i"  [style.background-color]="journeyType.touched ? '
+                                                    #f68517' : '#353535'" [ngClass]="newFareType ==='' ? 'inputError':''" tabindex="-1" >
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="col-sm-12" *ngIf="isExempt===false">
+                                    
+                                            <div class="vehicleTypeBlock row" formArrayName="paymentTypesBtns">
+                                                <div class="col-6 text-center" *ngFor="let paymentType of laneForm.get('paymentTypesBtns').controls; let i=index" (click)="selectedPaymentType(paymentType.value)">
+                                                    <input type="button" class="paymentType" [formControlName]="i"    [ngClass]="newPaymentMethod ==='' ? 'inputError':''"  [style.background-color]="paymentType.touched ? '#f68517' : '#353535'"   >
+                                                </div>
+                                            </div>
+                                         
+                                        </div>
+                                        <div class="col-sm-12 marginBottom marginTop5" *ngIf="isExempt===true">
+                                        
+                                            <select class="form-control customInput" (change)="onExemptTypeChange($event.target.value)" #exemptType formControlName="exemptType" id="exemptSubTypes" [class.inputError]="laneForm.controls.exemptType.errors">
+                                                <option value="" disabled>Select Exempt Types</option>
+                                                <option value="exemptArmy">Army</option>
+                                                <option value="Emergency">Emergency</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="col-sm-12 marginBottom" *ngIf="hideOpClass===true">
+                                    
+                                            <select class="form-control customInput" (change)="onExemptSubTypeChange($event.target.value)" #exemptSubType formControlName="exemptSubType" id="exemptSubTypes" [class.inputError]="laneForm.controls.exemptSubType.errors">
+                                                <option value="" disabled>Select Exempt Sub Types</option>
+                                                <option *ngFor="let exemptOther of exemptOthersArr" [value]="exemptOther.exemptOtherEntityId" >
+                                                    {{exemptOther.key}}
+                                                </option>
+                                                <option *ngFor="let exemptEmergency of exemptEmergencyArr" [value]="exemptEmergency.exemptEmergencyEntityId" >
+                                                    {{exemptEmergency.key}}
+                                                </option>
+                                            </select>
+                                         
+                                        </div> 
+                                        <div class="col-sm-12 marginTop20N blurJourneyTypes" *ngIf="newFareTypes.length===0">
+                                            <div class="vehicleTypeBlock row">
+                                                <div class="col-6 text-center">
+                                                   <button class="journeyType bgColor">DailyPassUnlimited</button>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <button class="journeyType bgColor">EXEMPT</button>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <button class="journeyType bgColor">LTO</button>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <button class="journeyType bgColor">SingleJourney</button>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="col-sm-12">
+                                           <input type="text" class="form-control customInput" placeholder="Enter Description" formControlName="description" maxlength="250"/>
+                                        </div>
+                                        <div class="col-sm-12 marginBottom marginTop5" *ngIf="hideOpClass===false">
+                                           <label class="form-control customLabel"  [ngClass]="[ isTrctComSelected ? 'decFntSize' : 'customLabel']">
+                                                {{vehicleTypeCopy}}
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-12 marginBottom" *ngIf="hideOpClass===false">
+                                            <label class="form-control customLabel">
+                                                {{newVehicleFare}} /-
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-12 inlineLabels" *ngIf="hideOpClass===true">
+                                            <label class="customLabel"  [ngClass]="[ isTrctComSelected ? 'decFntSize' : 'customLabel']">
+                                                {{vehicleTypeCopy}}
+                                            </label>
+                                            <label class="customLabel">
+                                                {{newVehicleFare}} /-
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-12 text-center">
+                                            <button type="submit" class="btn finishTxn btnStyle" [disabled]="disableFinishTxnBtn===true">Finish</button>
+                                            <p class="success" [class.error]="laneFormResponse.success===false"><i class="fa fa-thumbs-up thumbsupIcon" *ngIf="laneFormResponse.success" aria-hidden="true"></i>{{laneFormResponse.message}}</p>
+                                        </div>
+                                        <!-- <div class="col-sm-12" *ngIf="isViolationActive===true">
+                                            <button  class="btn finishTxn btnStyle violationBtn" [ngClass]="[hideOpClass ? 'exemptViolation' : 'violationBtn']">Violation started</button>
+                                        </div> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="row vehicleInfoList border1">
+        <div class="col-12 border1">
+            <table border="1" class="border1">
+                <thead>
+                    <tr>
+                        <td>TXN ID</td>
+                        <td>VEHICLE No.</td>
+                        <td>VEHICLE TYPE</td>
+                        <td>FARE TYPE</td>
+                        <td>PAYMENT TYPE</td>
+                        <td>VEHICLE FARE</td>
+                        <td>DATE TIME</td>
+                    </tr>
+                </thead>
+                <tbody *ngIf="listLaneTxnsError">
+                    <tr>
+                        <td colspan="6" class="error">{{this.listLaneTxnsError}}</td>
+                    </tr>
+                </tbody>
+                <tbody *ngFor="let lanetxn of allLaneTxnsInfoArr;let isOddRow=odd;
+                let isEvenRow=even">
+                    <tr [class.odd]="isOddRow" [class.even]="isEvenRow">
+                        <td>{{lanetxn.laneTxnDetailEntityId}}</td>
+                        <td>{{lanetxn.vehicleNumber}}</td>
+                        <td>{{lanetxn.originalVehicleType}}</td>
+                        <td>{{lanetxn.originalFareType}}</td>
+                        <td>{{lanetxn.originalPaymentName}}</td>
+                        <td>{{lanetxn.originalFare}}</td>
+                        <td>{{lanetxn.creationDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center">Copyright &copy; 2019 BHARI Infra Pvt.Ltd. All rights reserved</p>
+        <span class="contactUs">Contact Us : BhariInfra@gmail.com</span>
+    </footer>
+    <toaster-container [toasterconfig]="config"></toaster-container>
+</div>
